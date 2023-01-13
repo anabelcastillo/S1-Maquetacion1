@@ -1,0 +1,182 @@
+* {
+    margin:0px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+a {
+    color: rgb(205, 69, 20);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header, section, footer {
+    display: flex;
+}
+
+header {
+    flex-flow: column nowrap;
+    background-image: url("./images/header.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    padding: 0px;
+}
+
+.head-sup {
+    display: flex;
+    align-items: center;
+}
+
+.logo, .xxss {
+    flex: 1 1 auto;
+}
+
+.logo a img  {
+    width: auto;
+    height: 75px;
+}
+
+.nav {
+    justify-content: center;
+}
+
+.nav a {
+    color: gray;
+    letter-spacing: 1px;
+    padding: 0 30px;
+}
+
+.nav a:hover {
+    color: rgb(205, 69, 20);
+}
+
+.xxss {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.xxss a {
+    color: gray;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.xxss a:hover {
+    color: rgb(205, 69, 20);
+}
+
+.headline {
+    height: 100px;
+    margin: 0 50px;
+    margin-top: 120px;
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    color: rgba(205, 69, 20, 0.6);
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.contents {
+    background-color: darkslateblue;
+    display: flex;
+    flex: 2 1 auto;
+    flex-flow: row wrap;
+}
+
+.content {
+    height: 10px;
+    background-color: cornflowerblue;
+    flex: 1 1 40%;
+}
+
+.content-end {
+    height: 10px;
+    background-color: lightblue;
+    flex: 1 1 100%;
+}
+
+aside {
+    background-color: crimson;
+    flex: 1 1 auto;
+}
+
+.commercial {
+    height: 10px;
+    background-color: burlywood;
+}
+
+footer {
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+address {
+    background-color: gold;
+    height: 10px;
+}
+
+/* responsive lg 
+@media screen and (min-width: 1200px) {
+
+}*/
+
+/* responsive md */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    section {
+        flex-direction: column;
+        background-color: goldenrod;
+    }
+}
+
+/* responsive sm */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    section {
+        flex-direction: column;
+        background-color: goldenrod;
+    }
+    .head-sup {
+        flex-direction: column;
+    }
+    .nav a {
+        padding: 20px;
+    }
+}
+
+/* responsive xs */
+@media screen and (min-width: 1px) and (max-width: 767px) {
+    section {
+        flex-direction: column;
+        background-color: goldenrod;
+    }
+    .head-sup {
+        flex-direction: column;
+    }
+    .nav a {
+        padding: 10px;
+    }
+    .nav a i{
+        display: none;
+    }
+    .contents {
+        flex-direction: column;
+    }
+}
+
