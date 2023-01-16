@@ -88,18 +88,23 @@ address {
     height: 10px;
 }
 
-@media (min-width: 310px) and (max-width: 1024px){
+@media (min-width: 779px) and (max-width: 1024px){
     section {
         flex-direction: column;
         background-color: goldenrod;
     }
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 1px) and (max-width: 778px) {
     .head-sup {
         flex-direction: column;
         align-items: stretch;
         height: auto;
+    }
+
+    section {
+        flex-direction: column;
+        background-color: goldenrod;
     }
 
     .contents {
