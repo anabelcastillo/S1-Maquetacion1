@@ -28,11 +28,15 @@ a:hover {
 }
 
 h1 {
+    background-color: rgba(0, 0, 0, 0.10);
     font-family: 'Lora', serif;
     color: rgba(205, 69, 20, 0.6);
     font-size: 1.7rem;
     font-weight: 100;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    flex: 0 1 90%;
     animation: moveRight 1s ease-out 1s;
     animation-fill-mode: backwards;
 }
@@ -43,7 +47,6 @@ h2 {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2px;
-    height: 35px;
     padding-top: 10px;
     margin-bottom: 15px;
 }
@@ -77,6 +80,8 @@ header {
 }
 
 .nav {
+    display: flex;
+    flex: 1 1 auto;
     justify-content: center;
 }
 
@@ -106,10 +111,11 @@ header {
 }
 
 .headline {
-    height: 100px;
-    margin: 0 50px;
-    margin-top: 120px;
-    background-color: rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column wrap;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 0px;
 }
 
 section {
@@ -129,7 +135,7 @@ section {
 
 .content {
     background-color: whitesmoke;
-    flex: 1 1 40%;
+    flex: 1 1 45%;
     padding: 10px;
 }
 
@@ -150,7 +156,7 @@ section {
 }
 
 .content-end {
-    flex: 1 1 100%;
+    flex: 1 1 40%;
     color: black;
     text-align: center;
 }
@@ -183,7 +189,7 @@ address {
 @keyframes moveRight {
     0% { 
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(15px);
     }
     100% { 
         opacity: 1;
@@ -235,7 +241,7 @@ address {
 }
 
 /* responsive xs */
-@media screen and (min-width: 1px) and (max-width: 767px) {
+@media screen and (min-width: 524px) and (max-width: 767px) {
     section {
         flex-direction: column;
         row-gap: 0px;
@@ -246,11 +252,77 @@ address {
     .nav a {
         padding: 10px;
     }
+    .contents {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 523px) {
+    section {
+        flex-direction: column;
+        row-gap: 0px;
+    }
+    .head-sup {
+        flex-direction: column;
+    }
+    .nav a {
+        padding: 10px;
+        text-align: center;
+    }
     .nav a i{
         display: none;
     }
     .contents {
         flex-direction: column;
+    }
+}
+
+@media all and (max-width: 400px) {
+   .nav {
+        flex-direction: column;
+        justify-content: center;
+   }
+   .nav a {
+        padding: 3px 0;
+    }
+}   
+
+@media all and (max-width: 309px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    h2 {
+        letter-spacing: normal;
+    }
+}
+
+@media all and (max-width: 233px) {
+    h2 {
+        font-size: 1.2rem;
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: 220px) {
+    h2 {
+        font-size: 1rem;
+    }
+    .date {
+        font-size: 0.8rem;
+    }
+}
+
+@media all and (max-width: 203px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 0.7rem;
+    }
+    .date {
+        font-size: 0.6rem;
+        margin-top: -30px;
     }
 }
 
